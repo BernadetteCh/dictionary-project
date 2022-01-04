@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat+Alternates&family=Rock+3D&family=Titan+One&display=swap");
+
+.App {
+  text-align: center;
+  margin: 100px auto;
+}
+
+.icon {
+  width: 80px;
+}
+.App header {
+  font-family: "Rock 3D", cursive;
+  font-size: 60px;
+  color: #728fc9;
+ 
+}
+footer {
+  margin-top: 150px;
+}
