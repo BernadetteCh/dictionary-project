@@ -1,12 +1,15 @@
 import React, {useState} from "react";
 import axios from "axios";
 import "./Dictionary.css";
+import Results from "./Results";
 
 export default function Dictionary() {
     const[keyword, setKeyword]=useState("");
+    const[results, setResults]=useState("");
 
 function handleResponse(response){
-    console.log(response.data[0]);//Wal es mehrere "Bedeutungen" für a Wort gebn kau, verwend i des Array bei data [0]. 
+    console.log(response.data[0]);
+   setResults(response.data[0]);//Wal es mehrere "Bedeutungen" für a Wort gebn kau, verwend i des Array bei data [0]. 
 }
 function handleChange(event){
     event.preventDefault();
@@ -25,5 +28,8 @@ function handleSubmit(event){
           <input type="search" placeholder="search for a word" onChange={handleChange}></input>
        <button>Search</button>
       </form>
+      <div className="Results">
+          <Results results={results}/>
+      </div>
   </div>)
 }
