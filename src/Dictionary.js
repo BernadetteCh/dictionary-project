@@ -23,13 +23,23 @@ function handleSubmit(event){
   axios.get(apiUrl).then(handleResponse);
 }
 
-  return (<div className="Dictionary">
+  return (
+    <div className="Dictionary">
+      <label>What word do you want to look up?</label>
       <form onSubmit={handleSubmit}>
-          <input type="search" placeholder="search for a word" onChange={handleChange}></input>
-       <button>Search</button>
+        <input
+          type="search"
+          placeholder="search for a word"
+          onChange={handleChange}
+          className="search-input"
+        ></input>
+        <button>Search</button>
       </form>
+      <small>i.e sunset, coding, yoga, paris..</small>
+
       <div className="Results">
-          <Results results={results}/>
+        <Results results={results} />
       </div>
-  </div>)
+    </div>
+  );
 }
