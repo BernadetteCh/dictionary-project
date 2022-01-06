@@ -1,3 +1,40 @@
-.Dictionary {
-  margin-top: 50px;
+
+button{
+      font-size: 18px;
+    line-height: 21px;
+    padding: 20px 40px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-left: 12px;
 }
+
+
+.Dictionary {
+  margin: 50px auto;
+  max-width: 900px;
+  padding: 0px 45px;
+}
+.Dictionary small {
+  display: block;
+
+  margin-top: 15px;
+}
+.Dictionary label{
+      font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: block;
+    line-height: 29px;
+}
+
+
+.search-input{
+     font-size: 18px;
+    line-height: 21px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 70%;
+}
+
