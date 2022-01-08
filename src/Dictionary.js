@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
+import icon from "./books.jpg";
+import {IoSearchOutline} from "react-icons/io5";
 import "./Dictionary.css";
 import Results from "./Results";
 
@@ -25,6 +27,10 @@ function handleSubmit(event){
 
   return (
     <div className="Dictionary">
+      <div className="head">
+      <header>
+        <img src={icon} alt="icon of books" className="icon"></img>Dictionary
+      </header>
       <label>What word do you want to look up?</label>
       <form onSubmit={handleSubmit}>
         <input
@@ -33,10 +39,12 @@ function handleSubmit(event){
           onChange={handleChange}
           className="search-input"
         ></input>
-        <button>Search</button>
+        <button>
+          <IoSearchOutline />
+        </button>
       </form>
       <small>i.e sunset, coding, yoga, paris..</small>
-
+</div>
       <div className="Results">
         <Results results={results} />
       </div>
