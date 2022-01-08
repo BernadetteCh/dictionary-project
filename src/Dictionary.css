@@ -1,13 +1,26 @@
-
-button{
-      font-size: 18px;
-    line-height: 21px;
-    padding: 20px 40px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    margin-left: 12px;
+button {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 20px 40px;
+  color: grey;
+  border-radius: 6px;
+  margin-left: 12px;
+  background: linear-gradient(#fdfdfd, #d7dbe4);
+  box-shadow: 5px 5px 5px rgba(73, 72, 72, 0.1),
+    10px 10px 10px rgba(63, 63, 63, 0.1), 15px 15px 10px rgba(73, 72, 72, 0.1),
+    25px 25px 10px rgba(73, 72, 72, 0.1), inset 1px 1px 2px #fff;
+  border: none;
 }
-
+header {
+  font-family: "Rock 3D", cursive;
+  font-size: 60px;
+  color: #728fc9;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.icon {
+  width: 80px;
+}
 
 .Dictionary {
   margin: 50px auto;
@@ -19,22 +32,29 @@ button{
 
   margin-top: 15px;
 }
-.Dictionary label{
-      font-weight: 600;
-    font-style: normal;
-    font-size: 24px;
-    margin-bottom: 20px;
-    display: block;
-    line-height: 29px;
+.Dictionary label {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 29px;
 }
 
-
-.search-input{
-     font-size: 18px;
-    line-height: 21px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    width: 70%;
+.search-input {
+  font-size: 18px;
+  line-height: 21px;
+  border-radius: 6px;
+  width: 70%;
+  padding: 20px;
+  background: linear-gradient(#fdfdfd, #d7dbe4);
+  box-shadow: 5px 5px 5px rgba(73, 72, 72, 0.1),
+    10px 10px 10px rgba(63, 63, 63, 0.1), 15px 15px 10px rgba(73, 72, 72, 0.1),
+    25px 25px 10px rgba(73, 72, 72, 0.1), inset 1px 1px 2px #fff;
+  border: none;
+  color: grey;
+  outline: none;/*lässt "Rahme" beim Einfabefeld während man wos eintippt verschwinden*/
 }
-
+.head{
+  background-color: blueviolet;
+}

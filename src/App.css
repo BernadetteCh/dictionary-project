@@ -1,25 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat+Alternates&family=Rock+3D&family=Titan+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat&family=Montserrat+Alternates&family=Open+Sans:wght@300;400&family=Roboto&family=Rock+3D&family=Varela+Round&display=swap');
-.App{
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat&family=Montserrat+Alternates&family=Open+Sans:wght@300;400&family=Roboto&family=Rock+3D&family=Varela+Round&display=swap");
+.App {
   margin: 100px auto;
-font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
-.icon {
-  width: 80px;
-}
-.App header {
-font-family: 'Rock 3D', cursive;
-  font-size: 60px;
-  color: #728fc9;
-  text-align: center;
- 
-}
 footer {
   margin-top: 150px;
-text-align: center;
+  text-align: center;
 }
-footer a{
+footer a {
   text-decoration: none;
   color: grey;
 }
