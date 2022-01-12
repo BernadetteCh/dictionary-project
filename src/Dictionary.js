@@ -9,6 +9,7 @@ export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState("");
   const [loaded, setLoaded] = useState(false);
+  const [photos, setPhotos] = useState(null);
 
   function handleResponse(response) {
     console.log(response.data[0]);
@@ -18,10 +19,22 @@ export default function Dictionary(props) {
     event.preventDefault();
     setKeyword(event.target.value);
   }
+  function handlePexelsResponse(response) {
+    setPhotos(response.data.photos);
+  }
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`; //da setz i as useState ein damit ma noch jeden beliebigen Wort suchen kau
     axios.get(apiUrl).then(handleResponse);
     //API Link:https://dictionaryapi.dev/
+
+    let pexelsApiKey =
+      "563492ad6f91700001000001be1fd9e887f141208accb3c38e442891";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    axios
+      .get(pexelsApiUrl, {
+        headers: { Authorization: `Bearer ${pexelsApiKey}` },
+      })
+      .then(handlePexelsResponse);
   }
   function handleSubmit(event) {
     event.preventDefault();
