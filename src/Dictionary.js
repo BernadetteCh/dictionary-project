@@ -4,6 +4,7 @@ import icon from "./books.jpg";
 import { IoSearchOutline } from "react-icons/io5";
 import "./Dictionary.css";
 import Results from "./Results";
+import Photos from "./Photos";
 
 export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
@@ -29,7 +30,7 @@ export default function Dictionary(props) {
 
     let pexelsApiKey =
       "563492ad6f91700001000001be1fd9e887f141208accb3c38e442891";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
     axios
       .get(pexelsApiUrl, {
         headers: { Authorization: `Bearer ${pexelsApiKey}` },
@@ -70,6 +71,7 @@ export default function Dictionary(props) {
         <div className="Results">
           <Results results={results} />
         </div>
+        <Photos photos={photos}/>
       </div>
     );
   } else {
