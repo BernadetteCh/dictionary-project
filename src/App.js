@@ -7,7 +7,7 @@ function App() {
       <div className="container">
         
         <main>
-          <Dictionary defaultKeyword="cat"/>
+          <Dictionary defaultKeyword="kitten"/>
         </main>
         <footer>
           This project was coded by{" "}
