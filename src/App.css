@@ -3,26 +3,35 @@
 .App {
   margin: 0px auto;
   font-family: "Varela Round", sans-serif;
-  color: #6F8E9C;
-
+  color: #6f8e9c;
 }
 
 footer {
   text-align: center;
+  margin: 38px;
 }
 footer a {
   text-decoration: none;
   color: #003333;
 }
 
-footer a:hover{
-  color: #C0C2AC;
+footer a:hover {
+  color: #c0c2ac;
 }
 section {
+  box-shadow: 0 30px 50px rgb(0, 51, 51, 0.1);
+  border-radius: 8px;
 
-box-shadow: 0 30px 50px rgb(0, 51, 51,0.1);
-    border-radius: 8px;
-  background-color: rgb(211, 212, 194, 0.4);
-    margin-top: 10px;
-    padding: 40px;
+  background-color: rgb(211, 212, 194, 0.2);
+  margin-top: 10px;
+  padding: 40px;
+}
+@media (max-width: 600px) {
+  footer {
+    margin: 28px;
+    font-size: 14px;
+  }
+  section {
+    background-color: rgb(211, 212, 194, 0.2);
+  }
 }
