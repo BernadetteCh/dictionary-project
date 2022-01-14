@@ -2,34 +2,58 @@ button {
   font-size: 18px;
   line-height: 21px;
   padding: 20px 40px;
-  color: grey;
+  color: #6f8e9c;
+
   border-radius: 6px;
   margin-left: 12px;
-  background: linear-gradient(#fdfdfd, #d7dbe4);
+  background: linear-gradient(#fff, #6f8e9c30);
   box-shadow: 5px 5px 5px rgba(73, 72, 72, 0.1),
     10px 10px 10px rgba(63, 63, 63, 0.1), 15px 15px 10px rgba(73, 72, 72, 0.1),
     25px 25px 10px rgba(73, 72, 72, 0.1), inset 1px 1px 2px #fff;
   border: none;
 }
-header {
-  font-family: "Rock 3D", cursive;
-  font-size: 60px;
-  color: #728fc9;
+::placeholder {
+  color: #003333;
+}
+.wave {
+  position: relative;
+}
+.wave::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+  background-image: url(./wave.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.head {
   text-align: center;
   margin-bottom: 80px;
+  background-color: rgb(171, 184, 166, 0.6);
+  padding-bottom: 240px;
+}
+.head h1 {
+  display: inline-block;
+  margin-top: 180px;
+  font-family: "Rock 3D", cursive;
+  font-size: 80px;
+  font-weight: bolder;
+  color: rgb(0, 51, 51, 0.6);
+}
+.head span {
+  padding-right: 50px;
 }
 .icon {
   width: 80px;
 }
 
-.Dictionary {
-  margin: 50px auto;
-  max-width: 900px;
-  padding: 0px 45px;
-}
 .Dictionary small {
   display: block;
-
+  color: #003333;
   margin-top: 15px;
 }
 .Dictionary label {
@@ -39,6 +63,7 @@ header {
   margin-bottom: 20px;
   display: block;
   line-height: 29px;
+  color: rgb(0, 51, 51);
 }
 
 .search-input {
@@ -47,14 +72,15 @@ header {
   border-radius: 6px;
   width: 70%;
   padding: 20px;
-  background: linear-gradient(#fdfdfd, #d7dbe4);
+  color: #003333;
+  background: linear-gradient(#fff, #6f8e9c30);
   box-shadow: 5px 5px 5px rgba(73, 72, 72, 0.1),
     10px 10px 10px rgba(63, 63, 63, 0.1), 15px 15px 10px rgba(73, 72, 72, 0.1),
     25px 25px 10px rgba(73, 72, 72, 0.1), inset 1px 1px 2px #fff;
   border: none;
-  color: grey;
-  outline: none;/*lässt "Rahme" beim Einfabefeld während man wos eintippt verschwinden*/
+
+  outline: none; /*lässt "Rahme" beim Einfabefeld während man wos eintippt verschwinden*/
 }
-.head{
-  background-color: blueviolet;
+.content {
+  padding: 10px 90px;
 }

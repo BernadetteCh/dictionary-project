@@ -3,11 +3,10 @@ import Dictionary from "./Dictionary";
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        
+    <div className="container-fluid">
+      <div className="App">
         <main>
-          <Dictionary defaultKeyword="kitten"/>
+          <Dictionary defaultKeyword="kitten" />
         </main>
         <footer>
           This project was coded by{" "}
@@ -18,7 +17,7 @@ function App() {
           >
             Bernadette
           </a>
-          , and is open-sourced on{" "}
+          , is open-sourced on{" "}
           <a
             href="https://github.com/BernadetteCh/dictionary-project"
             target="_blank"

@@ -1,7 +1,13 @@
 li{
   display: inline;
     list-style: none;
-    color: blueviolet;
+    color: #003333;
     margin-right: 14px;
 }
-ul{padding: 0px;}
+ul{padding: 0px;
+
+}
+.Synonyms{
+  margin-top: 25px;
+  
+}

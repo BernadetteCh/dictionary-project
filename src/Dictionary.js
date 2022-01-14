@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import icon from "./books.jpg";
+import icon from "./owl-blue.png";
 import { IoSearchOutline } from "react-icons/io5";
 import "./Dictionary.css";
 import Results from "./Results";
@@ -36,7 +36,8 @@ export default function Dictionary(props) {
         headers: { Authorization: `Bearer ${pexelsApiKey}` },
       })
       .then(handlePexelsResponse);
-  }
+  } //die API von pexels will dass man die authorization via header "holt" und da muss man einfach nach dem API url diese Zeile headers: { Authorization: `Bearer ${pexelsApiKey}` }, einfügen
+  //in der search funtion werden zwei apis abgerufen einmal die von dictionary und einmal vo der für die fotos vo pexels
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -49,29 +50,40 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <div className="head">
-          <header>
-            <img src={icon} alt="icon of books" className="icon"></img>
-            Dictionary
-          </header>
-          <label>What word do you want to look up?</label>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="search"
-              placeholder="search for a word"
-              onChange={handleChange}
-              className="search-input"
-            ></input>
-            <button>
-              <IoSearchOutline />
-            </button>
-          </form>
-          <small>i.e sunset, coding, yoga, paris..</small>
+        <div className="wave">
+          <div className="head">
+            <header>
+              <h1>
+                <span>
+                  <img src={icon} alt="icon of books" className="icon"></img>
+                </span>
+                Dictionary
+              </h1>
+            </header>
+          </div>
         </div>
-        <div className="Results">
-          <Results results={results} />
+
+        <div className="content">
+          <section className="Dictionary-Search">
+            <label>What word do you want to look up?</label>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="search"
+                placeholder="search for a word"
+                onChange={handleChange}
+                className="search-input"
+              ></input>
+              <button>
+                <IoSearchOutline />
+              </button>
+            </form>
+            <small>i.e sunset, coding, yoga ..</small>
+          </section>
+          <div className="Results">
+            <Results results={results} />
+            <Photos photos={photos} />
+          </div>
         </div>
-        <Photos photos={photos}/>
       </div>
     );
   } else {
