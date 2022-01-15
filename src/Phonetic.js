@@ -1,21 +1,13 @@
 import React from "react";
-import "./Phonetic.css";
-import icon from "./sound.png";
+
+import Audio from "./Audio";
 
 export default function Phonetic(props) {
  
-
-  
   return (
     <div className="Phonetics">
-      {props.phonetics.text}
-      <span>
-     
-          <a href={props.phonetics.audio} target="_blank" className="audiolink">
-           <img src={icon}></img>
-          </a>
-    
-      </span>
+      {props.phonetics.text} <Audio audio={props.phonetics.audio} />
+
     </div>
   );
 }
