@@ -57,7 +57,7 @@ export default function Dictionary(props) {
                 <span>
                   <img src={icon} alt="icon of books" className="icon"></img>
                 </span>
-                DictionaryApp
+                Dictionary App
               </h1>
             </header>
           </div>
