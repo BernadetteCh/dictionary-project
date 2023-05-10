@@ -9,7 +9,7 @@ View photos related to the searched word
 
 [Link to project](https://frosty-lumiere-3bb161.netlify.app/)
 
-##Built with
+## Built with
 
 - HTML
 - CSS
